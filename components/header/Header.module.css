@@ -1,0 +1,33 @@
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 125px;
+}
+
+.container-header a {
+    color: var(--gris_claro);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.index-contenedor-registrateLogin {
+    margin-top: 15px;
+}
+
+.container-header img {
+    width: 15rem;
+    height: 60px;
+}
+
+@media (max-width: 600px) {
+    .container-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .index-contenedor-registrateLogin {
+        min-width: 152px;
+    }
+}

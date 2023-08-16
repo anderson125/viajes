@@ -1,0 +1,85 @@
+:root {
+    --blanco: #ffffff;
+    --azul_ppal: #0d3878;
+    --azul_claro: #34D4FF;
+    --gris_claro: #757677;
+    --blanco_sombreado: #e3e3e3;
+    --negro: #14171c;
+}
+
+* {
+    /*para q no se añada el padding y el border de mas y no genere scroll*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif, serif;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1 rem = 10px */
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+.titulo-viaje {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.icon__lugar {
+    position: absolute;
+    left: 2rem;
+    color: var(--gris_claro);
+    font-size: 1.8rem;
+    margin-left: 2rem;
+}
+
+.icon__lupa {
+    margin-right: 1rem;
+}
+
+.container__slogan--services {
+    display: flex;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.slogan__services--p {
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+/* PLANS  */
+
+.parrafoPauta {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.parrafoPauta h1 {
+    font-size: 5rem;
+    margin: 3rem;
+}
+
+/*  Searches */
+
+.icon__lugar--header {
+    position: absolute;
+    left: 2rem;
+    color: var(--gris_claro);
+    font-size: 2.4rem;
+    margin-left: 2rem;
+}
+
+.icon__lupa--header {
+    margin-right: 1rem;
+}
+
+
+/* ---------------------- */
+

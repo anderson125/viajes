@@ -1,0 +1,120 @@
+.planServices-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.icon-plan1 {
+    text-align: center;
+}
+
+.icon-plan1 img {
+    height: 15rem;
+}
+
+.icon-plan1 p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.btn-ws {
+    width: 22.5rem;
+    height: 4.4rem;
+    cursor: pointer;
+    border: 0.1rem solid darkgray;
+    position: relative;
+    background-color: #fff;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.img-ws {
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+    top: -2.4rem;
+    left: -9rem;
+
+}
+
+.info-ws {
+    font-size: 1rem;
+    color: black;
+    text-align: left;
+    position: relative;
+    top: -9.1rem;
+    left: 2rem;
+}
+
+.info-number-ws {
+    font-size: 2rem;
+    color: black;
+    text-align: left;
+    position: relative;
+    top: 0.01rem;
+    left: 2.6rem;
+}
+
+.btn-ws li {
+    list-style: none;
+}
+
+.btn-register {
+    width: 22rem;
+    height: 4.4rem;
+    border: #fff;
+    cursor: none;
+    position: relative;
+    border-bottom: 0.1rem solid darkgray;
+    background-color: var(--azul_ppal);
+    border-bottom-color: #2E86C1;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.img-btn-register {
+    width: 9rem;
+    height: 11.6rem;
+    position: relative;
+    top: -3.6rem;
+    left: -9.3rem;
+
+}
+
+.info-register {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.9rem;
+    color: white;
+    text-align: left;
+    position: relative;
+    top: -11rem;
+    left: 4.1rem;
+}
+
+.buttons-align {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+@media (max-width: 640px) {
+    .buttons-align {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planServices-icons{
+        flex-direction: column;
+        align-items: center;
+    }
+}

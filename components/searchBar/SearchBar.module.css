@@ -1,0 +1,122 @@
+.container-busqueda {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.container-flex {
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 33rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e1e1;
+}
+
+.button-design {
+    margin-left: -1.2rem;
+}
+
+.container-icon-busqLugar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-lugar {
+    font-size: 1.4rem;
+    border-radius: 1.5rem;
+    padding: .8rem 2rem;
+    border: none;
+    outline: none;
+    max-width: 160px;
+    color: var(--gris_claro);
+    text-align: center;
+}
+
+.container-boton-buscar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.boton-buscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul_ppal);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 10rem;
+    height: 30px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 5px 60px;
+    transition: 1s;
+}
+
+.boton-buscar:hover {
+    background-color: var(--azul_claro);
+    transition: 1s;
+}
+
+.departamentos-list {
+    position: absolute;
+    top: 0;
+    /* Ajusta la posición vertical de la lista */
+    left: 5px;
+    width: 250px;
+    background-color: #fff;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+.button-design-list {
+    margin-left: -1.2rem;
+    text-align: center;
+}
+
+.list-departament {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 8px 16px;
+    cursor: pointer;
+    gap: 20px;
+}
+
+.text-list {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 10px;
+    margin-top: -10px;
+}
+
+.button-design-list {
+    color: var(--azul_claro);
+}
+
+.departamentos-list li:hover {
+    background-color: #f0f0f0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.span-text {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 8px;
+}

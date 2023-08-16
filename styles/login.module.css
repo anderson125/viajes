@@ -1,0 +1,74 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-container {
+    border: 1px solid #e1e1e1;
+    border-radius: 25px;
+    padding: 5rem 10rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 900;
+    color: var(--gris_claro);
+    margin-bottom: 10px;
+}
+
+.control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 1px solid #e1e1e1;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control input {
+    border: none;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.control input:focus {
+    border-color: #e1e1e1;
+    outline: none;
+}
+
+.control input::placeholder {
+    text-align: center;
+}
+
+.control-button button {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gris_claro);
+    text-transform: capitalize;
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    transition: 1s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control-button button:hover {
+    background-color: #e1e1e1;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.control-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
