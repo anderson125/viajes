@@ -3,43 +3,75 @@ import axios from 'axios';
 import styles from './buttons.module.css';
 
 const ButtonCards = ({ onCategoryChange }) => {
-  const [categorys, setCategorys] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+    const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState('');
+    const [mainCategories, setMainCategories] = useState([]);
+    const [otherCategories, setOtherCategories] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get('https://api.directorioturismo.com/api/category/get-categories')
-      .then((response) => {
-        setCategorys(response.data.categories);
-      })
-      .catch((error) => {
-        setCategorys([]);
-      });
-  }, []);
+    useEffect(() => {
+        axios
+            .get('https://api.directorioturismo.com/api/category/get-categories')
+            .then((response) => {
+                const main = ['hoteles', 'ecohoteles', 'camping', 'alquiler de fincas', 'cabañas'];
+                const allCategories = response.data.categories;
+                const mainCats = allCategories.filter(item => main.includes(item.categorie.toLowerCase()));
+                const otherCats = allCategories.filter(item => !main.includes(item.categorie.toLowerCase()));
+                setMainCategories(mainCats);
+                setOtherCategories(otherCats);
+                setCategories(allCategories);
+            })
+            .catch((error) => {
+                setCategories([]);
+            });
+    }, []);
 
-  const handleButton = (categoryId) => {
-    if (selectedCategory === categoryId) {
-      // Si el mismo botón se presiona nuevamente, se deselecciona
-      setSelectedCategory(null);
-    } else {
-      setSelectedCategory(categoryId);
-    }
-    onCategoryChange(categoryId);
-  };
+    const handleSelect = (event) => {
+        const categoryId = event.target.value;
+        setSelectedCategory(categoryId);
+        onCategoryChange(categoryId);
+    };
 
-  return (
-    <div className={styles['card-button']}>
-      {categorys.map((item) => (
-        <button
-          onClick={() => handleButton(item._id)}
-          key={item._id}
-          className={`${styles['button']} ${selectedCategory === item._id ? styles['selected'] : ''}`}
-        >
-          {item.categorie}
-        </button>
-      ))}
-    </div>
-  );
+    return (
+        <div className={styles['card-button']}>
+            <select
+                value={selectedCategory}
+                onChange={handleSelect}
+                className={styles['select']}
+            >
+                <option value="">hospedaje</option>
+                {mainCategories.map(item => (
+                    <option key={item._id} value={item._id}>
+                        {item.categorie}
+                    </option>
+                ))}
+            </select>
+            <div className={styles['button-container']}>
+                {otherCategories.slice(0, 4).map(item => (
+                    <button
+                        key={item._id}
+                        onClick={() => handleSelect({ target: { value: item._id } })}
+                        className={`${styles['button']} ${selectedCategory === item._id ? styles['selected'] : ''}`}
+                    >
+                        {item.categorie}
+                    </button>
+                ))}
+                {otherCategories.length > 4 && (
+                    <select
+                        value={selectedCategory}
+                        onChange={handleSelect}
+                        className={`${styles['select']}`}
+                    >
+                        <option value="">Otros</option>
+                        {otherCategories.slice(4).map(item => (
+                            <option key={item._id} value={item._id}>
+                                {item.categorie}
+                            </option>
+                        ))}
+                    </select>
+                )}
+            </div>
+        </div>
+    );
 };
 
 export default ButtonCards;

@@ -157,3 +157,8 @@
 .selected button {
     color: #fff;
 }
+
+.cointainer-info span {
+    font-weight: 900;
+    font-style: capitalize;
+}

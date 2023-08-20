@@ -12,13 +12,46 @@
     font-size: 1.3rem;
 }
 
-.index-contenedor-registrateLogin {
-    margin-top: 20px;
+.admin-container {
+    margin-top: 15px;
+    display: flex;
+    gap: 25px;
+    margin-left: 50px;
 }
 
 .container-header img {
     width: 15rem;
     height: 60px;
+}
+
+.index-registrate-admin {
+    margin-top: 5px;
+}
+
+.container-client {
+    margin-top: 25px;
+}
+
+.index-contenedor-registrateLogin button {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--gris_claro);
+    text-transform: capitalize;
+    padding: 0 15px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    transition: 1s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.index-contenedor-registrateLogin button:hover {
+    background-color: #e1e1e1;
+    transition: 1s;
+    cursor: pointer;
 }
 
 @media (max-width: 900px) {

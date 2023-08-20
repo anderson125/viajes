@@ -6,6 +6,7 @@ import jwt from 'jsonwebtoken';
 import styles from './panel.module.css'
 import { Header } from "@/components/header/Header";
 import { Layout } from "@/components/layouts/Layout";
+import { SearchbarAdmin } from "@/components/searchbarAdmin/SearbarAdmin";
 import Swal from "sweetalert2";
 
 const AdminPanel = () => {
@@ -39,23 +40,9 @@ const AdminPanel = () => {
     }
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem('nestedToken');
-  
-    Swal.fire({
-      icon: 'success',
-      title: '¡Logout Exitoso!',
-      text: 'Has cerrado sesión correctamente.',
-      confirmButtonText: 'Aceptar',
-    }).then((result) => {
-      router.push('/authentication/login')
-    });
-  };
-
   return (
     <Layout title="Panel de administración">
       <Header />
-
       <div className={styles["grid-container"]}>
         <div className={styles["container-text"]}>
           <h1>Panel Administrativo</h1>
@@ -63,10 +50,10 @@ const AdminPanel = () => {
         <div className={styles["flex-links"]}>
           <Link href='/customers/create'>Crear Cliente</Link>
           <Link href='/categories/create'>Crear Categoria</Link>
-          <button onClick={handleLogout}>Cerrar sesión</button>
         </div>
       </div>
 
+      <SearchbarAdmin />
     </Layout>
   )
 }

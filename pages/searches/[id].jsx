@@ -7,6 +7,9 @@ import axios from "axios";
 import ButtonCards from "@/components/cardsbuttons/ButtonCards";
 
 export const SearchesPage = () => {
+  const router = useRouter();
+  const { id } = router.query;
+
   const [customers, setCustomers] = useState([]);
   const [matches, setMatches] = useState([]);
 
@@ -18,9 +21,6 @@ export const SearchesPage = () => {
       setMatches(customers);
     }
   };
-
-  const router = useRouter();
-  const { id } = router.query;
 
   useEffect(() => {
     axios.get(`https://api.directorioturismo.com/api/customer/search-customer/?${id}`)

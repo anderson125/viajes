@@ -2,7 +2,31 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-container select {
+  margin-left: 10px;
+}
+
+.select {
+  padding: 1rem .6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: var(--azul_ppal);
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  color: var(--blanco);
+  max-width: 120px;
+  margin: 4rem 0;
+  transition: background-color 0.5s, color 0.5s;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .button {
@@ -10,12 +34,14 @@
   font-size: 1.4rem;
   font-weight: 600;
   background-color: var(--azul_ppal);
+  text-transform: capitalize;
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   color: var(--blanco);
-  min-width: 220px;
+  min-width: 120px;
   margin: 4rem 0;
   transition: background-color 0.5s, color 0.5s;
+  margin-left: 15px;
 }
 
 .button:hover {
@@ -35,6 +61,22 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+  }
+
+  .select {
+    min-width: 220px;
+    margin: 0;
+  }
+
+  .button-container select {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .button {

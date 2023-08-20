@@ -72,11 +72,11 @@ const ResultsGrid = ({ customers }) => {
             </div>
             {selectedCustomer && (
               <div>
-                <h3>{selectedCustomer.description}</h3>
-                <h3>Página Web: {selectedCustomer.link}</h3>
-                <h3>Teléfonos: {selectedCustomer.phone_number}</h3>
-                <h3>e-mail: {selectedCustomer.Email}</h3>
-                <h3>{selectedCustomer.address}</h3>
+                <p>{selectedCustomer.description}</p>
+                <p><span>Página Web:</span> {selectedCustomer.link}</p>
+                <p><span>Teléfonos:</span> {selectedCustomer.phone_number}</p>
+                <p><span>e-mail: </span>{selectedCustomer.Email}</p>
+                <p>{selectedCustomer.address}</p>
               </div>
             )}
           </div>

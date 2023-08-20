@@ -32,14 +32,6 @@ export const PlansServices = () => {
             </section>
 
             <section className={styles['buttons-align']}>
-                <button className={styles['btn-register']}>
-                    <div>
-                        <Image src={LogoRs} alt="logo" className={styles['img-btn-register']} />
-                    </div>
-                    <div className={styles['info-register']}>
-                            <p>Registra tu empresa</p>
-                    </div>
-                </button>
                 <div>
                     <button className={styles['btn-ws']}>
                         <div>

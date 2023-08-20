@@ -6,6 +6,7 @@ import styles from './categorie.module.css';
 import axios from 'axios';
 import { Layout } from '@/components/layouts/Layout';
 import { Header } from '@/components/header/Header';
+import Swal from 'sweetalert2';
 
 const CategoriesCreate = () => {
 
@@ -56,7 +57,11 @@ const CategoriesCreate = () => {
 
         try {
             const response = await axios.post('https://api.directorioturismo.com/api/category/save', CategorieName, { headers: { Authorization: `${token}` } });
-            console.log('Respuesta del servidor:', response);
+            Swal.fire({
+                icon: 'success',
+                title: 'La Categoria Fue Creada Correctamente',
+            });
+            router.push('/admin/panel');
 
         } catch (error) {
             console.log(error);

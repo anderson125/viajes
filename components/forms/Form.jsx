@@ -4,7 +4,7 @@ import axios from 'axios'
 import styles from './curtomerRegister.module.css'
 import Swal from 'sweetalert2';
 
-const Form = ({ handleSubmit, handleChange, formData }) => {
+const Form = ({ handleSubmit, handleChange, formData, customer }) => {
     const [data, setData] = useState([]);
     const [muni, setMuni] = useState([]);
 
@@ -40,7 +40,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
     return (
         <div className={styles["container-form"]}>
             <div className={styles['container-info']}>
-                <h1>Registro de Cliente</h1>
+                <h1>{customer ? customer.company_name : 'Registro de Cliente'}</h1>
                 <form onSubmit={handleSubmit} className={styles["container-grid"]}>
                     <div className={styles["form-group"]}>
                         <input
@@ -52,7 +52,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="Nombre de la empresa"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             work
                         </span>
                     </div>
@@ -67,7 +67,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="Identificación"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             remember_me
                         </span>
                     </div>
@@ -82,7 +82,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="Teléfono"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             phone_iphone
                         </span>
                     </div>
@@ -97,7 +97,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="Email"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             mail
                         </span>
                     </div>
@@ -112,7 +112,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="Nombre"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             person
                         </span>
                     </div>
@@ -127,13 +127,13 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="surname"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             person
                         </span>
                     </div>
 
                     <div className={styles["custom-select"]}>
-                        <select onChange={handleChange} name="municipality_id">
+                        <select onChange={handleChange} name="municipality_id" value={formData.municipality_id || ""}>
                             <option value="">Selecciona un municipio</option>
                             {muni.map((item) => (
                                 <option key={item._id} value={item._id}>{item.municipality_name}</option>
@@ -142,7 +142,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                     </div>
 
                     <div className={styles["custom-select"]}>
-                        <select onChange={handleChange} name="category_id">
+                        <select onChange={handleChange} name="category_id" value={formData.category_id || ""}>
                             <option value="">Selecciona una categoria</option>
                             {data.map((item) => (
                                 <option key={item._id} value={item._id}>{item.categorie}</option>
@@ -161,7 +161,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             required
                         />
 
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             location_on
                         </span>
                     </div>
@@ -176,7 +176,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="Como llegar"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             home_work
                         </span>
                     </div>
@@ -191,7 +191,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="descripcion"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             edit_note
                         </span>
                     </div>
@@ -206,7 +206,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             placeholder="Pagina Web"
                             required
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             language
                         </span>
                     </div>
@@ -220,7 +220,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             picture_as_pdf
                         </span>
                     </div>
@@ -234,7 +234,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -248,7 +248,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -262,7 +262,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -276,7 +276,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -290,7 +290,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -304,7 +304,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -317,7 +317,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             onChange={handleChange}
                             accept=".pdf,.png,.jpg,.jpeg"
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -331,7 +331,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -345,7 +345,7 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
@@ -359,13 +359,13 @@ const Form = ({ handleSubmit, handleChange, formData }) => {
                             accept=".pdf,.png,.jpg,.jpeg"
 
                         />
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             image
                         </span>
                     </div>
 
                     <div className={styles["control-button"]}>
-                        <button type="submit">Registrar cliente</button>
+                        <button type="submit">{customer ? 'Guardar Cambios' : 'Registrar cliente'}</button>
                     </div>
                 </form>
             </div>
