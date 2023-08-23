@@ -64,7 +64,7 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                             name="identification"
                             value={formData.identification}
                             onChange={handleChange}
-                            placeholder="NIT"
+                            placeholder="NIT - Cedula"
                             required
                         />
                         <span className="material-symbols-outlined">
@@ -124,7 +124,7 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                             name="surname"
                             value={formData.surname}
                             onChange={handleChange}
-                            placeholder="apellido"
+                            placeholder="Apellido"
                             required
                         />
                         <span className="material-symbols-outlined">
@@ -173,7 +173,7 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                             name="description"
                             value={formData.description}
                             onChange={handleChange}
-                            placeholder="descripcion"
+                            placeholder="Descripcion"
                             required
                         />
                         <span className="material-symbols-outlined">

@@ -23,7 +23,7 @@ const ClientEdit = () => {
         category_id: '',
         Email: '',
         address: '',
-        how_to_get: '',
+        how_to_get: null,
         description: '',
         RNT: true,
         link: '',
