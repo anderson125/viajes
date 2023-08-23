@@ -79,7 +79,7 @@ export const SearchBar = () => {
 
     const handleButtonClick = () => {
         if (municipioID) {
-            router.push(`/searches/muni=${municipioID}`);
+            router.push(`/searches/${municipioID}`);
         } else {
             Swal.fire({
                 icon: 'error',

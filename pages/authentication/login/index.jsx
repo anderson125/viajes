@@ -36,7 +36,6 @@ const Login = () => {
             email,
             password,
         };
-        console.log(userData);
 
         try {
             const response = await axios.post('https://api.directorioturismo.com/api/user/login', userData);

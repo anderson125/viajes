@@ -95,7 +95,6 @@ const CardsAdmin = ({ muni }) => {
                 {customers.length > 0 ?
                     customers.map(item => (
                         <div className={styles['container-customer']} key={item._id}>
-                            {console.log(item)}
                             <h4>{item.company_name}</h4>
 
                             <div className={styles['buttons-customer']}>
@@ -106,7 +105,11 @@ const CardsAdmin = ({ muni }) => {
                     ))
                     : (
                         <div className={styles['text-admin']}>
-                            <h2>Busquemos los clientes</h2>
+                            {muni ?
+                                <h2>No se encontraron clientes en la ciudad seleccionada</h2>
+                                : 
+                                <h2>Busquemos los clientes</h2>
+                            }
                         </div>
                     )}
             </main>

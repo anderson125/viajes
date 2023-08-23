@@ -9,6 +9,7 @@ import ButtonCards from "@/components/cardsbuttons/ButtonCards";
 export const SearchesPage = () => {
   const router = useRouter();
   const { id } = router.query;
+  const initialId = id || "default";  
 
   const [customers, setCustomers] = useState([]);
   const [matches, setMatches] = useState([]);
@@ -23,16 +24,18 @@ export const SearchesPage = () => {
   };
 
   useEffect(() => {
-    axios.get(`https://api.directorioturismo.com/api/customer/search-customer/?${id}`)
-      .then((response) => {
-        setCustomers(response.data.articles);
-        setMatches(response.data.articles);
-      })
-      .catch((error) => {
-        setCustomers([]);
-        setMatches([]);
-      });
-  }, [id]);
+    if (initialId !== "default") {
+      axios.get(`https://api.directorioturismo.com/api/customer/search-customer/?muni=${initialId}`)
+        .then((response) => {
+          setCustomers(response.data.articles);
+          setMatches(response.data.articles);
+        })
+        .catch((error) => {
+          setCustomers([]);
+          setMatches([]);
+        });
+    }
+  }, [initialId]);
 
   return (
     <Layout title="Busqueda">

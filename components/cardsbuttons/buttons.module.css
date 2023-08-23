@@ -15,14 +15,13 @@
 }
 
 .select {
-  padding: 1rem .6rem;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 600;
   background-color: var(--azul_ppal);
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   color: var(--blanco);
-  max-width: 120px;
+  max-width: 140px;
   margin: 4rem 0;
   transition: background-color 0.5s, color 0.5s;
   text-transform: capitalize;
@@ -31,7 +30,7 @@
 
 .button {
   padding: 1rem 2.5rem;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 600;
   background-color: var(--azul_ppal);
   text-transform: capitalize;
@@ -64,6 +63,7 @@
   }
 
   .select {
+    padding: 1rem 2.5rem;
     min-width: 220px;
     margin: 0;
   }

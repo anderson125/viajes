@@ -10,7 +10,7 @@ export default function Home() {
       <h1 className="titulo-viaje">¡Es el momento de viajar por Colombia!</h1>
       <SearchBar />
 
-      <section className="container__slogan--services">
+      <section className="container-slogan">
         <p className="slogan__services--p">Encuentra hoteles, agencias de viajes, operadores turísticos, guías...</p>
       </section>
     </Layout>

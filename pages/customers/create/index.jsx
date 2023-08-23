@@ -52,7 +52,7 @@ const ClientRegistration = () => {
         category_id: '',
         Email: '',
         address: '',
-        how_to_get: '',
+        how_to_get: null,
         description: '',
         RNT: true,
         link: '',
@@ -86,7 +86,6 @@ const ClientRegistration = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
 
         const token = localStorage.getItem('nestedToken')
 
@@ -96,9 +95,7 @@ const ClientRegistration = () => {
             formDataToSend.append(key, value);
         });
 
-        console.log(formData);
         try {
-            
             const response = await axios.post('https://api.directorioturismo.com/api/customer/save-customer', formDataToSend, {
                 headers: {
                     Authorization: `${token}`
@@ -113,7 +110,6 @@ const ClientRegistration = () => {
 
             router.push('/admin/panel');
         } catch (error) {
-            console.log(error)
             Swal.fire({
                 icon: 'error',
                 title: 'Error',

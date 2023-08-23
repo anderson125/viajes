@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
 import axios from 'axios';
 
 import styles from './SearchBar.module.css';
@@ -13,7 +12,6 @@ export const SearchbarAdmin = () => {
     const [municipios, setMunicipios] = useState([]);
     const [municipiosFiltrados, setMunicipiosFiltrados] = useState([]);
     const municipioListaRef = useRef(null);
-    const router = useRouter();
 
     const handleMunicipioChange = (e) => {
         const value = e.target.value;

@@ -7,7 +7,11 @@ const Slider = ({ images }) => {
       <Carousel showArrows emulateTouch showStatus={false} >
         {images.map((image, index) => (
           <div key={index} className="image-slide">
-            <img src={`http://api.directorioturismo.com/api/customer/image/${image}`} alt={`Slide ${index}`} />
+            {image ? (
+              <img src={`http://api.directorioturismo.com/api/customer/image/${image}`} alt={`Slide ${index}`} />
+            ) : (
+              <img src="/kaka.jpg" alt={`Slide klakakakakka`} />
+            )}
           </div>
         ))}
       </Carousel>

@@ -64,7 +64,7 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                             name="identification"
                             value={formData.identification}
                             onChange={handleChange}
-                            placeholder="Identificación"
+                            placeholder="NIT"
                             required
                         />
                         <span className="material-symbols-outlined">
@@ -124,7 +124,7 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                             name="surname"
                             value={formData.surname}
                             onChange={handleChange}
-                            placeholder="surname"
+                            placeholder="apellido"
                             required
                         />
                         <span className="material-symbols-outlined">
@@ -163,21 +163,6 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
 
                         <span className="material-symbols-outlined">
                             location_on
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="text"
-                            className="form-control"
-                            name="how_to_get"
-                            value={formData.how_to_get}
-                            onChange={handleChange}
-                            placeholder="Como llegar"
-                            required
-                        />
-                        <span className="material-symbols-outlined">
-                            home_work
                         </span>
                     </div>
 
