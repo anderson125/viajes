@@ -33,19 +33,20 @@ const ButtonCards = ({ onCategoryChange }) => {
 
     return (
         <div className={styles['card-button']}>
-            <select
-                value={selectedCategory}
-                onChange={handleSelect}
-                className={styles['select']}
-            >
-                <option value="">hospedaje</option>
-                {mainCategories.map(item => (
-                    <option key={item._id} value={item._id}>
-                        {item.categorie}
-                    </option>
-                ))}
-            </select>
-            <div className={styles['button-container']}>
+             <div className={styles['button-container']}>
+                <select
+                    value={selectedCategory}
+                    onChange={handleSelect}
+                    className={styles['select']}
+                >
+                    <option value="">hospedaje</option>
+                    {mainCategories.map(item => (
+                        <option key={item._id} value={item._id}>
+                            {item.categorie}
+                        </option>
+                    ))}
+                </select>
+           
                 {otherCategories.slice(0, 4).map(item => (
                     <button
                         key={item._id}

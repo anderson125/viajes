@@ -10,7 +10,7 @@ const Slider = ({ images }) => {
             {image ? (
               <img src={`http://api.directorioturismo.com/api/customer/image/${image}`} alt={`Slide ${index}`} />
             ) : (
-              <img src="/kaka.jpg" alt={`Slide klakakakakka`} />
+              <img src="/default.jpg" alt={`Slide ${index}`} />
             )}
           </div>
         ))}

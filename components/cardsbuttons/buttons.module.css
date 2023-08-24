@@ -14,19 +14,19 @@
   margin-left: 10px;
 }
 
-.select {
+.card-button select {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
   background-color: var(--azul_ppal);
+  text-transform: capitalize;
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   color: var(--blanco);
-  max-width: 140px;
+  min-width: 120px;
   margin: 4rem 0;
   transition: background-color 0.5s, color 0.5s;
-  text-transform: capitalize;
-  text-align: center;
+  margin-left: 15px;
 }
 
 .button {
