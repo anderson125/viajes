@@ -33,20 +33,20 @@ const ButtonCards = ({ onCategoryChange }) => {
 
     return (
         <div className={styles['card-button']}>
-             <div className={styles['button-container']}>
-                <select
-                    value={selectedCategory}
-                    onChange={handleSelect}
-                    className={styles['select']}
-                >
-                    <option value="">hospedaje</option>
-                    {mainCategories.map(item => (
-                        <option key={item._id} value={item._id}>
-                            {item.categorie}
-                        </option>
-                    ))}
-                </select>
-           
+
+            <select
+                value={selectedCategory}
+                onChange={handleSelect}
+                className={styles['select']}
+            >
+                <option value="">hospedaje</option>
+                {mainCategories.map(item => (
+                    <option key={item._id} value={item._id}>
+                        {item.categorie}
+                    </option>
+                ))}
+            </select>
+            <div className={styles['button-container']}>
                 {otherCategories.slice(0, 4).map(item => (
                     <button
                         key={item._id}
@@ -56,21 +56,22 @@ const ButtonCards = ({ onCategoryChange }) => {
                         {item.categorie}
                     </button>
                 ))}
-                {otherCategories.length > 4 && (
-                    <select
-                        value={selectedCategory}
-                        onChange={handleSelect}
-                        className={`${styles['select']}`}
-                    >
-                        <option value="">Otros</option>
-                        {otherCategories.slice(4).map(item => (
-                            <option key={item._id} value={item._id}>
-                                {item.categorie}
-                            </option>
-                        ))}
-                    </select>
-                )}
             </div>
+            {otherCategories.length > 4 && (
+                <select
+                    value={selectedCategory}
+                    onChange={handleSelect}
+                    className={`${styles['select']}`}
+                >
+                    <option value="">Otros</option>
+                    {otherCategories.slice(4).map(item => (
+                        <option key={item._id} value={item._id}>
+                            {item.categorie}
+                        </option>
+                    ))}
+                </select>
+            )}
+
         </div>
     );
 };

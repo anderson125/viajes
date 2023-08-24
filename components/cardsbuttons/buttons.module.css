@@ -14,8 +14,7 @@
   margin-left: 10px;
 }
 
-.card-button select {
-  padding: 1rem 2.5rem;
+.select {
   font-size: 1.1rem;
   font-weight: 600;
   background-color: var(--azul_ppal);
@@ -23,10 +22,15 @@
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   color: var(--blanco);
-  min-width: 120px;
+  min-width: 140px;
   margin: 4rem 0;
   transition: background-color 0.5s, color 0.5s;
   margin-left: 15px;
+}
+
+.select option {
+  padding: 1rem 2.5rem;
+  text-align: center;
 }
 
 .button {
