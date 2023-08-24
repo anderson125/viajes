@@ -15,6 +15,7 @@
 }
 
 .select {
+  padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
   background-color: var(--azul_ppal);
@@ -54,7 +55,7 @@
   color: var(--blanco);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 976px) {
   .card-button {
     display: flex;
     flex-direction: column;
