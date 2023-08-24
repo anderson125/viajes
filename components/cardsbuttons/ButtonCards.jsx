@@ -33,19 +33,26 @@ const ButtonCards = ({ onCategoryChange }) => {
 
     return (
         <div className={styles['card-button']}>
+            <div className={styles['div-select']}>
+                <select
+                    value={selectedCategory}
+                    onChange={handleSelect}
+                    className={styles['select']}
+                >
+                    <option value="">hospedaje</option>
+                    {mainCategories.map(item => (
+                        <option key={item._id} value={item._id}>
+                            {item.categorie}
+                        </option>
+                    ))}
+                </select>
+                <span class="material-symbols-outlined">
+                    expand_more
+                </span>
+            </div>
 
-            <select
-                value={selectedCategory}
-                onChange={handleSelect}
-                className={styles['select']}
-            >
-                <option value="">hospedaje</option>
-                {mainCategories.map(item => (
-                    <option key={item._id} value={item._id}>
-                        {item.categorie}
-                    </option>
-                ))}
-            </select>
+
+
             <div className={styles['button-container']}>
                 {otherCategories.slice(0, 4).map(item => (
                     <button
@@ -58,18 +65,23 @@ const ButtonCards = ({ onCategoryChange }) => {
                 ))}
             </div>
             {otherCategories.length > 4 && (
-                <select
-                    value={selectedCategory}
-                    onChange={handleSelect}
-                    className={`${styles['select']}`}
-                >
-                    <option value="">Otros</option>
-                    {otherCategories.slice(4).map(item => (
-                        <option key={item._id} value={item._id}>
-                            {item.categorie}
-                        </option>
-                    ))}
-                </select>
+                <div className={styles['div-select']}>
+                    <select
+                        value={selectedCategory}
+                        onChange={handleSelect}
+                        className={`${styles['select']}`}
+                    >
+                        <option value="">Otros</option>
+                        {otherCategories.slice(4).map(item => (
+                            <option key={item._id} value={item._id}>
+                                {item.categorie}
+                            </option>
+                        ))}
+                    </select>
+                    <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </div>
             )}
 
         </div>

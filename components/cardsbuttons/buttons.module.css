@@ -15,6 +15,11 @@
 }
 
 .select {
+  padding: 1rem 2.5rem;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font-size: 1.1rem;
   font-weight: 600;
   background-color: var(--azul_ppal);
@@ -28,9 +33,17 @@
   margin-left: 15px;
 }
 
-.select option {
-  padding: 1rem 2.5rem;
-  text-align: center;
+.div-select {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.div-select span {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  color: #fff;
 }
 
 .button {
@@ -89,5 +102,3 @@
     margin: 5px;
   }
 }
-
-
