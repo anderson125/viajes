@@ -46,7 +46,7 @@ const ButtonCards = ({ onCategoryChange }) => {
                         </option>
                     ))}
                 </select>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     expand_more
                 </span>
             </div>
@@ -78,7 +78,7 @@ const ButtonCards = ({ onCategoryChange }) => {
                             </option>
                         ))}
                     </select>
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                         expand_more
                     </span>
                 </div>

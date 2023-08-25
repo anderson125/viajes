@@ -91,7 +91,7 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                         <input
                             type="text"
                             className="form-control"
-                            name="Email"
+                            name="email"
                             value={formData.Email}
                             onChange={handleChange}
                             placeholder="Email"

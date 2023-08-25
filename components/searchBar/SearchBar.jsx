@@ -30,6 +30,7 @@ export const SearchBar = () => {
         setMunicipiosFiltrados([]);
     };
 
+
     useEffect(() => {
         const resultado = municipios.find(
             (item) => item.municipality_name === municipioValue.toLocaleUpperCase()
@@ -73,6 +74,17 @@ export const SearchBar = () => {
     }, [])
 
     useEffect(() => {
+        const resultado = municipios.find(
+            (item) => item._id === municipioID
+        );
+        if (resultado && resultado._id) {
+            setMunicipioID(resultado._id);
+        } else {
+            setMunicipioID(null)
+        }
+    }, [municipioID]);
+
+    useEffect(() => {
         setMunicipioValue('');
         setMunicipios([]);
     }, []);
@@ -111,10 +123,11 @@ export const SearchBar = () => {
                                     </div>
 
                                     <div className={styles['text-list']}>
-                                        {mun.municipality_name} - {mun.department_id.department}
+                                        {/* Cambia cómo se muestra el nombre del municipio */}
+                                        {mun.municipality_name === "Santa Fe de BogotA" ? "Bogotá" : mun.municipality_name} - {mun.department_id.department}
                                         <div className={styles['text-span-container']}>
                                             <span className={styles['span-text']}>
-                                                Cuidad
+                                                Ciudad
                                             </span>
                                         </div>
                                     </div>

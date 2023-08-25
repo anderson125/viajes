@@ -16,7 +16,6 @@
 
 .select {
   padding: 1rem 2.5rem;
-  text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -31,6 +30,7 @@
   margin: 4rem 0;
   transition: background-color 0.5s, color 0.5s;
   margin-left: 15px;
+  text-align: center;
 }
 
 .div-select {
@@ -84,11 +84,6 @@
     padding: 1rem 2.5rem;
     min-width: 220px;
     margin: 0;
-  }
-
-  .button-container select {
-    margin-left: 5px;
-    margin-top: 5px;
   }
 
   .button-container {

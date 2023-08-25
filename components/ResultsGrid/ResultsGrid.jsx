@@ -75,7 +75,7 @@ const ResultsGrid = ({ customers }) => {
                 <p>{selectedCustomer.description}</p>
                 <p><span>Página Web:</span> {selectedCustomer.link}</p>
                 <p><span>Teléfonos:</span> {selectedCustomer.phone_number}</p>
-                <p><span>e-mail: </span>{selectedCustomer.Email}</p>
+                <p><span>e-mail: </span>{selectedCustomer.email}</p>
                 <p>{selectedCustomer.address}</p>
               </div>
             )}

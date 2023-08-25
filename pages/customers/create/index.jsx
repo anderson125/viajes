@@ -50,7 +50,7 @@ const ClientRegistration = () => {
         phone_number: '',
         municipality_id: '',
         category_id: '',
-        Email: '',
+        email: '',
         address: '',
         how_to_get: null,
         description: '',
