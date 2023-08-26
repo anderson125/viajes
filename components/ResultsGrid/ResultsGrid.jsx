@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './ResultsGrid.module.css';
 import Slider from '../slider/Slider';
 
@@ -6,6 +6,16 @@ const ResultsGrid = ({ customers }) => {
   const [selectedCustomer, setSelectedCustomer] = useState(null);
   const [showInfo, setShowInfo] = useState(false);
   const [selectedButtonId, setSelectedButtonId] = useState(null);
+
+  useEffect(() => {
+    customers?.map((item, index) => {
+      if(index == 0){
+        setSelectedCustomer(item)
+        setShowInfo(true)
+        setSelectedButtonId(item._id)
+      }
+    })
+  }, [customers])
 
   const handleCustomerSelect = (customer) => {
     setSelectedCustomer(customer);

@@ -1,7 +1,7 @@
 .container-searchs {
     display: flex;
     justify-content: center;
-    margin: 10rem 13rem;
+    margin: 2rem 13rem;
 }
 
 .cointainer-grid {
@@ -76,9 +76,9 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .container-searchs{
-        margin: 4rem 1rem;
+        margin: 4rem .5rem;
     }
 
     .cointainer-grid {
@@ -97,15 +97,10 @@
 
 @media (max-width: 1150px) {
     .cointainer-clientes {
-        width: 50%;
-    }
-}
-
-@media (max-width: 1150px) {
-    .cointainer-clientes {
         width: 30%;
     }
 }
+
 
 @media (max-width: 950px) {
     .cointainer-clientes {
