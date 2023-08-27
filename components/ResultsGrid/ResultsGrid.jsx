@@ -97,13 +97,17 @@ const ResultsGrid = ({ customers }) => {
                                     </div>
 
                                     <div className={styles['button-responsive']}>
-                                        <Link href={`http://${selectedCustomer.link}`} target='_blank' rel="noopener noreferrer">
-                                            <Image src={Logowww} alt="www" className={styles['www-logo']} />
-                                        </Link>
+                                        {selectedCustomer.link && selectedCustomer.link.length > 1 && (
+                                            <Link href={`http://${selectedCustomer.link}`} target='_blank' rel="noopener noreferrer">
+                                                <Image src={Logowww} alt="www" className={styles['www-logo']} />
+                                            </Link>
+                                        )}
 
-                                        <Link href={`https://api.whatsapp.com/send?phone=${selectedCustomer.phone_number}`} target='_blank'>
-                                            <Image src={LogoWs} alt="wpp" className={styles['wpp-logo']} />
-                                        </Link>
+                                        {selectedCustomer.phone_number && selectedCustomer.phone_number.length > 1 && (
+                                            <Link href={`https://api.whatsapp.com/send?phone=${selectedCustomer.phone_number}`} target='_blank'>
+                                                <Image src={LogoWs} alt="wpp" className={styles['wpp-logo']} />
+                                            </Link>
+                                        )}
                                     </div>
                                 </div>
                             </div>
