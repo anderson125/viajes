@@ -92,7 +92,7 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                             type="text"
                             className="form-control"
                             name="email"
-                            value={formData.Email}
+                            value={formData.email}
                             onChange={handleChange}
                             placeholder="Email"
                             required

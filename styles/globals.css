@@ -61,7 +61,16 @@ body {
 
 .parrafoPauta h1 {
     font-size: 5rem;
-    margin: 3rem;
+    margin: 1rem;
+}
+
+.text-pauta {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-pauta p {
+    margin: -8px 20px;
 }
 
 /*  Searches */
@@ -80,4 +89,3 @@ body {
 
 
 /* ---------------------- */
-

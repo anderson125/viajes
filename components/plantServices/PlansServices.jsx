@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 import styles from './PlansServices.module.css'
 import LogoWs from '../../assets/wpp/logo_ws.png'
-import LogoRs from '../../assets/wpp/logo_register.png'
 
 import imgCamera from '@/assets/plans/Logo-camara.png'
 import imgText from '@/assets/plans/Logo-Texto.png'

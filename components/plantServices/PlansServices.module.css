@@ -3,8 +3,8 @@
     flex-direction: row;
     justify-content: center;
     gap: 8rem;
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
 .icon-plan1 {
@@ -104,7 +104,7 @@
     flex-direction: row;
     justify-content: center;
     gap: 3rem;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 @media (max-width: 640px) {
