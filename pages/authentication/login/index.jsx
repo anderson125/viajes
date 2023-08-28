@@ -7,19 +7,26 @@ import { Layout } from '@/components/layouts/Layout';
 import { Header } from '@/components/header/Header';
 import Swal from 'sweetalert2';
 
+const TOKEN_KEY = 'nestedToken';
+
 const Login = () => {
+    const router = useRouter();
 
     useEffect(() => {
-        const isLoggedIn = localStorage.getItem('nestedToken');
-    
+        const isLoggedIn = localStorage.getItem(TOKEN_KEY);
+
         if (isLoggedIn) {
-          router.push('/admin/panel');
+            const tokenData = JSON.parse(isLoggedIn);
+            if (tokenData.expiration > Date.now()) {
+                router.push('/admin/panel');
+            } else {
+                localStorage.removeItem(TOKEN_KEY);
+            }
         }
-      }, []);
+    }, []);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const router = useRouter();
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -42,7 +49,9 @@ const Login = () => {
 
             const { token } = response.data;
 
-            localStorage.setItem('nestedToken', token);
+            const expiration = Date.now() + 6 * 60 * 60 * 1000; // 6 horas en milisegundos
+
+            localStorage.setItem(TOKEN_KEY, JSON.stringify({ token, expiration }));
 
             Swal.fire({
                 icon: 'success',
