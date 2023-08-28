@@ -102,7 +102,7 @@ const ResultsGrid = ({ customers }) => {
 
                                         {selectedCustomer.phone_number && selectedCustomer.phone_number.length > 1 && (
                                             <Link href={`https://api.whatsapp.com/send?phone=${selectedCustomer.phone_number}`} target='_blank'>
-                                                <img src='/logowsss.svg' alt="wpp" className={styles['wpp-logo']} />
+                                                <img src='/Logowsss.svg' alt="wpp" className={styles['wpp-logo']} />
                                             </Link>
                                         )}
                                     </div>
