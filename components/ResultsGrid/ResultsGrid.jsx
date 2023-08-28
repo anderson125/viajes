@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './ResultsGrid.module.css';
 import Slider from '../slider/Slider';
 
-import LogoWs from '../../assets/wpp/logo_wsss.svg'
-import Logowww from '../../assets/wpp/Logo_www.svg'
 import Link from 'next/link';
-import Image from 'next/image';
 
 const ResultsGrid = ({ customers }) => {
     const [selectedCustomer, setSelectedCustomer] = useState(null);
@@ -99,13 +96,13 @@ const ResultsGrid = ({ customers }) => {
                                     <div className={styles['button-responsive']}>
                                         {selectedCustomer.link && selectedCustomer.link.length > 1 && (
                                             <Link href={`http://${selectedCustomer.link}`} target='_blank' rel="noopener noreferrer">
-                                                <img src='../../assets/wpp/Logo_www.svg' alt="www" className={styles['www-logo']} />
+                                                <img src='/Logowww.svg' alt="www" className={styles['www-logo']} />
                                             </Link>
                                         )}
 
                                         {selectedCustomer.phone_number && selectedCustomer.phone_number.length > 1 && (
                                             <Link href={`https://api.whatsapp.com/send?phone=${selectedCustomer.phone_number}`} target='_blank'>
-                                                <img src='../../assets/wpp/logo_wsss.svg' alt="wpp" className={styles['wpp-logo']} />
+                                                <img src='/logowsss.svg' alt="wpp" className={styles['wpp-logo']} />
                                             </Link>
                                         )}
                                     </div>
