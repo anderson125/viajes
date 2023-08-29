@@ -9,9 +9,9 @@ const Slider = ({ images }) => {
         {images.map((image, index) => (
           <div key={index} className={styles["image-slide"]}>
             {image ? (
-              <img src={`https://api.directorioturismo.com/api/customer/image/${image}`} alt={`Slide ${index}`} />
+              <img src={`https://api.directorioturismo.com/api/customer/image/${image}`} alt={`${index}`} />
             ) : (
-              <img src="/default.jpg" alt={`Slide ${index}`} />
+              <img src="/default.jpg" alt={`${index}`} />
             )}
           </div>
         ))}
