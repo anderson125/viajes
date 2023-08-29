@@ -89,7 +89,7 @@ const ClientEdit = () => {
                             phone_number: response.data.customer.phone_number || '',
                             municipality_id: response.data.customer.municipality_id || '',
                             category_id: response.data.customer.category_id || '',
-                            Email: response.data.customer.Email || '',
+                            email: response.data.customer.email || '',
                             address: response.data.customer.address || '',
                             how_to_get: response.data.customer.how_to_get || '',
                             description: response.data.customer.description || '',

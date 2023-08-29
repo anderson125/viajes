@@ -85,7 +85,9 @@ const ResultsGrid = ({ customers }) => {
                         {selectedCustomer && (
                             <div>
                                 <p>{selectedCustomer.description}</p>
-                                <p><span>Página Web:</span> {selectedCustomer.link}</p>
+                                {selectedCustomer.link && selectedCustomer.link.length > 1 && (
+                                    <p><span>Página Web:</span> {selectedCustomer.link}</p>
+                                )}                           
                                 <p><span>Teléfonos:</span> {selectedCustomer.phone_number}</p>
                                 <div className={styles['buttons-contact']}>
                                     <div className={styles['text-buttons']}>
