@@ -110,7 +110,7 @@ export const SearchBar = () => {
                         className={styles['input-lugar']}
                         type="text"
                         name="ciudad"
-                        placeholder="Cuidad"
+                        placeholder="Ciudad"
                         value={municipioValue}
                         onChange={handleMunicipioChange}
                     />

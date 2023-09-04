@@ -14,16 +14,16 @@ export const PlansServices = () => {
             <section>
                 <div className={styles["planServices-icons"]}>
                     <div className={styles["icon-plan1"]}>
-                        <Image src={imgCamera} alt="imagen camara" width={180} height={50} />
+                        <Image src={imgCamera} alt="imagen camara" width={160} height={160} priority="true" />
                         <p>10 fotografías</p>
                     </div>
                     <div className={styles["icon-plan1"]}>
-                        <Image src={imgText} alt="imagen camara" width={180} height={50} />
+                        <Image src={imgText} alt="imagen camara" width={160} height={160} priority="true" />
                         <p>100 palabras con la</p>
                         <p>información de tu negocio</p>
                     </div>
                     <div className={styles["icon-plan1"]}>
-                        <Image src={imgWeb} alt="imagen camara" width={180} height={50} />
+                        <Image src={imgWeb} alt="imagen camara" width={160} height={160} priority="true" />
                         <p>Enlace a tu página Web</p>
                         <p>y Whatsapp(si tienes)</p>
                     </div>
@@ -34,7 +34,7 @@ export const PlansServices = () => {
                 <div>
                     <button className={styles['btn-ws']}>
                         <div>
-                            <Image src={LogoWs} alt="logo" className={styles['img-ws']} />
+                            <Image src={LogoWs} alt="logo" className={styles['img-ws']} priority="true"  />
                         </div>
                         <div>
                             <Link href="https://api.whatsapp.com/send?phone=573125515919" target='_blank' className={styles['info-ws']}>

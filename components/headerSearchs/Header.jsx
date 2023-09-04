@@ -59,6 +59,7 @@ export const HeaderSearchs = () => {
                         alt="Logo de la empresa"
                         width={240}
                         height={10}
+                        priority="true"
                     />
                 </Link>
                 <SearchBar />

@@ -19,7 +19,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" type="image/png" href='logo.svg' />
+          <link rel="icon" type="image/svg" href='logo.svg' />
           <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
         </Head>
         <body>

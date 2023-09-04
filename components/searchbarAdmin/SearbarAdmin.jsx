@@ -84,7 +84,7 @@ export const SearchbarAdmin = () => {
         } else {
             Swal.fire({
                 icon: 'error',
-                title: 'Por favor, selecciona correctamente la cuidad',
+                title: 'Por favor, selecciona correctamente la ciudad',
             });
         }
     };
@@ -99,7 +99,7 @@ export const SearchbarAdmin = () => {
                             className={styles['input-lugar']}
                             type="text"
                             name="ciudad"
-                            placeholder="Cuidad"
+                            placeholder="Ciudad"
                             value={municipioValue}
                             onChange={handleMunicipioChange}
                         />
@@ -115,7 +115,7 @@ export const SearchbarAdmin = () => {
                                             {mun.municipality_name} - {mun.department_id.department}
                                             <div className={styles['text-span-container']}>
                                                 <span className={styles['span-text']}>
-                                                    Cuidad
+                                                    Ciudad
                                                 </span>
                                             </div>
                                         </div>

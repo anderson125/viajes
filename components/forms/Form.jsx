@@ -41,7 +41,6 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
         <div className={styles["container-form"]}>
             <div className={styles['container-info']}>
                 <h1>{customer ? customer.company_name : 'Registro de Cliente'}</h1>
-                {console.log(formData)}
                 <form onSubmit={handleSubmit} className={styles["container-grid"]}>
                     <div className={styles["form-group"]}>
                         <input

@@ -56,6 +56,7 @@ export const Header = () => {
                         alt="Logo de la empresa"
                         width={240}
                         height={10}
+                        priority="true"
                     />
                 </Link>
                 <nav className={styles["index-contenedor-registrateLogin"]}>
