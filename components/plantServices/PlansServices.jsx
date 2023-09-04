@@ -14,16 +14,16 @@ export const PlansServices = () => {
             <section>
                 <div className={styles["planServices-icons"]}>
                     <div className={styles["icon-plan1"]}>
-                        <Image src={imgCamera} alt="imagen camara" width={160} height={160} priority="true" />
+                        <Image src={imgCamera} alt="imagen camara" width={200} height={160} priority="true" />
                         <p>10 fotografías</p>
                     </div>
                     <div className={styles["icon-plan1"]}>
-                        <Image src={imgText} alt="imagen camara" width={160} height={160} priority="true" />
+                        <Image src={imgText} alt="imagen camara" width={200} height={160} priority="true" />
                         <p>100 palabras con la</p>
                         <p>información de tu negocio</p>
                     </div>
                     <div className={styles["icon-plan1"]}>
-                        <Image src={imgWeb} alt="imagen camara" width={160} height={160} priority="true" />
+                        <Image src={imgWeb} alt="imagen camara" width={200} height={160} priority="true" />
                         <p>Enlace a tu página Web</p>
                         <p>y Whatsapp(si tienes)</p>
                     </div>
