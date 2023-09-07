@@ -95,7 +95,6 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Email"
-                            required
                         />
                         <span className="material-symbols-outlined">
                             mail

@@ -8,12 +8,19 @@
 }
 
 .icon-plan1 {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .icon-plan1 p {
     text-align: center;
     font-size: 2rem;
+    margin: -8px 20px;
+}
+
+.icon-plan1 img {
+    margin-bottom: 2rem;
 }
 
 

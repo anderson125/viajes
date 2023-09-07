@@ -11,8 +11,8 @@ const PlansPage = () => {
             <h1>PAUTA CON NOSOTROS</h1>
             <div className="text-pauta">
               <p>Amigo empresario del sector turismo, construyamos juntos el directorio turístico más grande </p>
-              <p> de Colombia y permite que los clientes te encuentren de manera fácil , rápida y sin intermediarios. </p>
-              <p>Valor plan por un año: $199.900COP </p>
+              <p> de Colombia y permite que los clientes te encuentren de manera fácil, rápida y sin intermediarios. </p>
+              <p>Valor plan por un año: $199.900</p>
             </div>
       </section>
       

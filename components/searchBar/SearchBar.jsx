@@ -95,7 +95,7 @@ export const SearchBar = () => {
         } else {
             Swal.fire({
                 icon: 'error',
-                title: 'Por favor, selecciona correctamente la cuidad',
+                title: 'Por favor, selecciona correctamente la ciudad',
             });
         }
     };
