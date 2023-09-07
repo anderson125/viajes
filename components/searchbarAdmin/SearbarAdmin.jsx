@@ -32,14 +32,14 @@ export const SearchbarAdmin = () => {
 
     useEffect(() => {
         const resultado = municipios.find(
-            (item) => item.municipality_name === municipioValue.toLocaleUpperCase()
+            (item) => item._id === municipioID
         );
         if (resultado && resultado._id) {
             setMunicipioID(resultado._id);
         } else {
             setMunicipioID(null)
         }
-    }, [municipioValue]);
+    }, [municipioID]);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
