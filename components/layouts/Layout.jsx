@@ -1,4 +1,6 @@
 import Head from "next/head"
+import styles from './layout.module.css'
+import FooterMenu from "../footer/Footer"
 
 export const Layout = ({ children, title }) => {
   return (
@@ -14,9 +16,11 @@ export const Layout = ({ children, title }) => {
         
       </Head>
 
-      <main>
+      <main className={styles['Layout-container']}>
         {children}
       </main>
+
+      <FooterMenu />
     </>
   )
 }

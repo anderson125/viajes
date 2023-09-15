@@ -5,6 +5,7 @@ import { Layout } from "@/components/layouts/Layout";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ButtonCards from "@/components/cardsbuttons/ButtonCards";
+import FooterMenu from "@/components/footer/Footer";
 
 export const SearchesPage = () => {
   const router = useRouter();
@@ -42,6 +43,7 @@ export const SearchesPage = () => {
       <HeaderSearchs />
       <ButtonCards onCategoryChange={handleCategorySelect} />
       <ResultsGrid customers={matches} />
+
     </Layout>
   )
 }

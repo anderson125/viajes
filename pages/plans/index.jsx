@@ -1,3 +1,4 @@
+import FooterMenu from "@/components/footer/Footer"
 import { Header } from "@/components/header/Header"
 import { Layout } from "@/components/layouts/Layout"
 import { PlansServices } from "@/components/plantServices/PlansServices"

@@ -1,0 +1,25 @@
+.text-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5rem;
+    
+}
+
+.text-section p {
+    margin-top: 1rem;
+}
+
+.text-section h2 {
+    margin-top: 6rem;
+}
+
+.last-p {
+    margin-bottom: 10rem;
+}
+
+@media (min-width: 720px) {
+    .text-section{
+        max-width: 80%;
+        margin: -15px 14rem;
+    }
+}
