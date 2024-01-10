@@ -6,9 +6,9 @@ import { SearchBar } from "@/components/searchBar/SearchBar";
 
 export default function Home() {
   return (
-    <Layout title="Directory">
+    <Layout title="Directorio Turismo">
       <Header />
-      <h1 className="titulo-viaje">¡Es el momento de viajar por Colombia!</h1>
+      <h1 className="titulo-viaje">Directorio turístico de Colombia</h1>
       <SearchBar />
 
       <section className="container-slogan">
