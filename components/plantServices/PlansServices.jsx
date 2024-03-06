@@ -15,12 +15,13 @@ export const PlansServices = () => {
                 <div className={styles["planServices-icons"]}>
                     <div className={styles["icon-plan1"]}>
                         <Image src={imgCamera} alt="imagen camara" width={200} height={160} priority="true" />
-                        <p>10 fotografías</p>
+                        <p>Una imagen del logo de tu empresa</p>
+                        <p>o fotografía de tu negocio</p>
                     </div>
                     <div className={styles["icon-plan1"]}>
                         <Image src={imgText} alt="imagen camara" width={200} height={160} priority="true" />
-                        <p>100 palabras con la</p>
-                        <p>información de tu negocio</p>
+                        <p>Hasta 50 palabras con la</p>
+                        <p>información de tu negocio.</p>
                     </div>
                     <div className={styles["icon-plan1"]}>
                         <Image src={imgWeb} alt="imagen camara" width={200} height={160} priority="true" />
@@ -37,12 +38,12 @@ export const PlansServices = () => {
                             <Image src={LogoWs} alt="logo" className={styles['img-ws']} priority="true"  />
                         </div>
                         <div>
-                            <Link href="https://api.whatsapp.com/send?phone=573125515919" target='_blank' className={styles['info-ws']}>
-                                Escríbenos, comunícate con un asesor
+                            <div className={styles['info-ws']}>
+                                <span>Informes al whatsapp</span>
                                 <li className={styles['info-number-ws']}>
-                                    <p>573125515919</p>
+                                    <p>3125515919</p>
                                 </li>
-                            </Link>
+                            </div>
                         </div>
                     </button>
                 </div>

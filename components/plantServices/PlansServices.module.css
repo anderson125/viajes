@@ -27,7 +27,7 @@
 .btn-ws {
     width: 22.5rem;
     height: 4.4rem;
-    cursor: pointer;
+    
     border: 0.1rem solid darkgray;
     position: relative;
     background-color: #fff;
@@ -53,6 +53,14 @@
     position: relative;
     top: -9.1rem;
     left: 2rem;
+}
+
+.info-ws span {
+    padding-left: 55px;
+}
+
+.info-ws p {
+    padding-left: 22px;
 }
 
 .info-number-ws {
