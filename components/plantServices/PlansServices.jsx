@@ -16,7 +16,7 @@ export const PlansServices = () => {
                     <div className={styles["icon-plan1"]}>
                         <Image src={imgCamera} alt="imagen camara" width={200} height={160} priority="true" />
                         <p>Una imagen del logo de tu empresa</p>
-                        <p>o fotografía de tu negocio</p>
+                        <p>o fotografía de tu negocio.</p>
                     </div>
                     <div className={styles["icon-plan1"]}>
                         <Image src={imgText} alt="imagen camara" width={200} height={160} priority="true" />
@@ -26,7 +26,7 @@ export const PlansServices = () => {
                     <div className={styles["icon-plan1"]}>
                         <Image src={imgWeb} alt="imagen camara" width={200} height={160} priority="true" />
                         <p>Enlace a tu página Web</p>
-                        <p>y Whatsapp(si tienes)</p>
+                        <p>y Whatsapp (si tienes).</p>
                     </div>
                 </div>
             </section>
@@ -39,7 +39,7 @@ export const PlansServices = () => {
                         </div>
                         <div>
                             <div className={styles['info-ws']}>
-                                <span>Informes al whatsapp</span>
+                                <span>Informes al Whatsapp.</span>
                                 <li className={styles['info-number-ws']}>
                                     <p>3125515919</p>
                                 </li>

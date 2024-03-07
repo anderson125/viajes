@@ -73,6 +73,25 @@ body {
     margin: -8px 20px;
 }
 
+@media (width < 600px ) {
+    .parrafoPauta h1 {
+        font-size: 26px;
+    }
+
+    .text-pauta p {
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+}
+
+@media (width < 373px ) {
+    .parrafoPauta h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 18px;
+    }
+}
+
 /*  Searches */
 
 .icon__lugar--header {
