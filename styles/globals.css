@@ -1,110 +1,169 @@
 :root {
-    --blanco: #ffffff;
-    --azul_ppal: #0d3878;
-    --azul_claro: #34D4FF;
-    --gris_claro: #757677;
-    --blanco_sombreado: #e3e3e3;
-    --negro: #14171c;
+  --blanco: #ffffff;
+  --azul_ppal: #0d3878;
+  --azul_claro: #34d4ff;
+  --gris_claro: #757677;
+  --blanco_sombreado: #e3e3e3;
+  --negro: #14171c;
 }
 
 * {
-    /*para q no se añada el padding y el border de mas y no genere scroll*/
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif, serif;
-    text-decoration: none;
+  /*para q no se añada el padding y el border de mas y no genere scroll*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif, serif;
+  text-decoration: none;
 }
 
 html {
-    font-size: 62.5%;
-    /* 1 rem = 10px */
+  font-size: 62.5%;
+  /* 1 rem = 10px */
 }
 
 body {
-    font-size: 1.6rem;
-    line-height: 2;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 .titulo-viaje {
-    text-align: center;
-    font-size: 2.4rem;
+  text-align: center;
+  font-size: 2.4rem;
 }
 
 .icon__lugar {
-    position: absolute;
-    left: 2rem;
-    color: var(--gris_claro);
-    font-size: 1.8rem;
-    margin-left: 2rem;
+  position: absolute;
+  left: 2rem;
+  color: var(--gris_claro);
+  font-size: 1.8rem;
+  margin-left: 2rem;
 }
 
 .icon__lupa {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .container-slogan {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 20px;
-    text-align: center;
-    margin: 17px 39px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 20px;
+  text-align: center;
+  margin: 17px 39px;
 }
 
 /* PLANS  */
 
 .parrafoPauta {
-    text-align: center;
-    font-size: 2.5rem;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 .parrafoPauta h1 {
-    font-size: 5rem;
-    margin: 1rem;
+  font-size: 3.5rem;
+  margin: 1rem;
 }
 
 .text-pauta {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin: 0 36vh;
+  line-height: 1.2;
+}
+
+@media (width < 1068px) {
+  .parrafoPauta h1 {
+    font-size: 26px;
+  }
+
+  .text-pauta {
+    margin: 0 22vh;
+    line-height: 1.2;
+  }
+}
+
+@media (width < 769px) {
+  .text-pauta {
+    margin: 0 7vh;
+    line-height: 1.2;
+  }
+}
+
+@media (width < 391px) {
+  .text-pauta {
+    margin: 0 1vh;
+    line-height: 1.2;
+  }
 }
 
 .text-pauta p {
-    margin: -8px 20px;
+  margin: -8px 20px;
 }
 
-@media (width < 600px ) {
-    .parrafoPauta h1 {
-        font-size: 26px;
-    }
+@media (width < 600px) {
+  .parrafoPauta h1 {
+    font-size: 26px;
+  }
 
-    .text-pauta p {
-        line-height: 1.2;
-        margin-bottom: 8px;
-    }
+  .text-pauta p {
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
 }
 
-@media (width < 373px ) {
-    .parrafoPauta h1 {
-        font-size: 26px;
-        line-height: 1.2;
-        margin-bottom: 18px;
-    }
+@media (width < 373px) {
+  .parrafoPauta h1 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
 }
 
 /*  Searches */
 
 .icon__lugar--header {
-    position: absolute;
-    left: 2rem;
-    color: var(--gris_claro);
-    font-size: 2.4rem;
-    margin-left: 2rem;
+  position: absolute;
+  left: 2rem;
+  color: var(--gris_claro);
+  font-size: 2.4rem;
+  margin-left: 2rem;
 }
 
 .icon__lupa--header {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
-
 /* ---------------------- */
+
+
+.buttons-list-menu button {
+  margin-top: 25px;
+  margin-bottom: -25px;
+  background-color: #0d3878;
+  border-radius: 14px;
+  color: white;
+  font-size: 7px;
+  font-weight: bold;
+  width: 105px;
+}
+
+.list-button {
+  width: 105px;
+  text-transform: capitalize;
+  font-size: 8px;
+  text-align: right;
+}
+
+@media (min-width: 600px) {
+  .buttons-list-menu button {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-width: 180px;
+  }
+
+  .list-button {
+    min-width: 170px;
+    padding-top: 8px;
+    font-size: 14px;
+  }
+}

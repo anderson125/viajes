@@ -48,6 +48,7 @@ const ClientRegistration = () => {
         name: '',
         surname: '',
         phone_number: '',
+        whatsapp: '',
         municipality_id: '',
         category_id: '',
         email: '',
@@ -58,15 +59,8 @@ const ClientRegistration = () => {
         link: '',
         file_rnt: null,
         file_01: null,
-        file_02: null,
-        file_03: null,
-        file_04: null,
-        file_05: null,
-        file_06: null,
-        file_07: null,
-        file_08: null,
-        file_09: null,
-        file_10: null,
+        instagram: '',
+        facebook: '',
     });
 
     const handleChange = (e) => {

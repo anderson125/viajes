@@ -195,6 +195,48 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
 
                     <div className={styles["form-group"]}>
                         <input
+                            type="text"
+                            className="form-control"
+                            name="facebook"
+                            value={formData.facebook}
+                            onChange={handleChange}
+                            placeholder="facebook"
+                        />
+                        <span className="material-symbols-outlined">
+                            language
+                        </span>
+                    </div>
+
+                    <div className={styles["form-group"]}>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="whatsapp"
+                            value={formData.whatsapp}
+                            onChange={handleChange}
+                            placeholder="whatsapp"
+                        />
+                        <span className="material-symbols-outlined">
+                            phone_iphone
+                        </span>
+                    </div>
+
+                    <div className={styles["form-group"]}>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="instagram"
+                            value={formData.instagram}
+                            onChange={handleChange}
+                            placeholder="instagram"
+                        />
+                        <span className="material-symbols-outlined">
+                            language
+                        </span>
+                    </div>
+
+                    <div className={styles["form-group"]}>
+                        <input
                             type="file"
                             className="form-control-file"
                             name="file_rnt"
@@ -220,131 +262,7 @@ const Form = ({ handleSubmit, handleChange, formData, customer }) => {
                             image
                         </span>
                     </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_02"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_03"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_04"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_05"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_06"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_07"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_08"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_09"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
-
-                    <div className={styles["form-group"]}>
-                        <input
-                            type="file"
-                            className="form-control-file"
-                            name="file_10"
-                            onChange={handleChange}
-                            accept=".pdf,.png,.jpg,.jpeg"
-
-                        />
-                        <span className="material-symbols-outlined">
-                            image
-                        </span>
-                    </div>
+                    
 
                     <div className={styles["control-button"]}>
                         <button type="submit">{customer ? 'Guardar Cambios' : 'Registrar cliente'}</button>

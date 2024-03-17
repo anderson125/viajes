@@ -11,7 +11,7 @@ import imgWeb from '@/assets/plans/Logo-WEB-WSP.png'
 export const PlansServices = () => {
     return (
         <>
-            <section>
+            <section className={styles["planServices-container"]}>
                 <div className={styles["planServices-icons"]}>
                     <div className={styles["icon-plan1"]}>
                         <Image src={imgCamera} alt="imagen camara" width={200} height={160} priority="true" />

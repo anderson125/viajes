@@ -1,195 +1,38 @@
-.container-searchs {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 13rem;
+.customer-image-small {
+  max-width: 180px;
+  min-width: 180px;
+  min-width: "130px";
+  width: "100%";
+  object-fit: "cover";
 }
 
-.cointainer-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    gap: 5rem;
+.description-client {
+  font-size: 15px;
+  padding: 6px 8px;
 }
 
-/* button client */
-
-.cointainer-clientes {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    height: 100%;
-    padding: 1rem 2rem;
-    border: 1px solid #e1e1e1;
+.informative-clients-contact {
+  margin-left: -8px;
+  margin-top: -12px;
 }
 
-.control-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.informative-clients-contact p {
+  font-size: 12px;
 }
 
-.control-button span {
-    margin-top: 5px;
-}
+@media (width < 400px) {
+  .customer-image-small {
+    max-width: 100px;
+    min-width: 100px;
+    height: 70px;
+  }
 
-.control-button {
-    border: none;
-    outline: none;
-    
-    color: var(--gris_claro);
-    
-    padding: 5px 15px;
-    text-align: center;
-    border-radius: 15px;
-    border: 1px solid #e1e1e1;
-    transition: 1s;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    width: 100%;
-}
+  .description-client {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
 
-.control-button button {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    text-transform: capitalize;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.control-button:hover {
-    background-color: #e1e1e1;
-    transition: 1s;
-    cursor: pointer;
-}
-
-/* info client */
-
-
-.cointainer-info {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    height: 100%;
-    padding: 1rem 2rem;
-    border: 1px solid #e1e1e1;
-}
-
-
-@media (max-width: 1000px) {
-    .container-searchs{
-        margin: 4rem .5rem;
-    }
-
-    .cointainer-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cointainer-clientes {
-        width: 25%;
-    }
-
-    .cointainer-info {
-        width:90%;
-    }
-}
-
-@media (max-width: 1150px) {
-    .cointainer-clientes {
-        width: 30%;
-    }
-}
-
-
-@media (max-width: 950px) {
-    .cointainer-clientes {
-        width: 38%;
-    }
-}
-
-@media (max-width: 750px) {
-    .cointainer-clientes {
-        width: 50%;
-    }
-}
-
-@media (max-width: 640px) {
-    .container-searchs{
-        margin: 4rem 1rem;
-    }
-
-    .cointainer-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cointainer-clientes {
-        width: 61%;
-    }
-
-    .cointainer-info {
-        width: 90%;
-    }
-}
-
-@media (max-width: 475px) {
-    .cointainer-clientes {
-        width: 100%;
-    }
-
-    .cointainer-info {
-        width: 100%;
-    }
-}
-
-
-.selected {
-    background-color: var(--azul_claro);
-    color: #fff;
-}
-
-.selected button {
-    color: #fff;
-}
-
-.cointainer-info span {
-    font-weight: 900;
-    font-style: capitalize;
-}
-
-.buttons-contact{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.wpp-logo {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-}
-
-.www-logo {
-    width: 50px;
-    height: 50px;
-}
-
-.text-buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-@media (max-width: 600px) {
-    .buttons-contact{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .button-responsive {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+  .informative-clients-contact p {
+    font-size: 8px;
+  }
 }

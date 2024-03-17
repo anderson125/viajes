@@ -1,120 +1,68 @@
-import React, { useEffect, useState } from 'react';
-import styles from './ResultsGrid.module.css';
-import Slider from '../slider/Slider';
+import React from 'react';
+import { Grid, Card, CardContent, Typography } from '@mui/material';
+import Wsp from '../../public/WSP.png';
+import Facebk from '../../public/Facebook.png';
+import Insta from '../../public/Instagram.png';
+import Www from '../../public/www.png';
+import Image from 'next/image';
 
-import Link from 'next/link';
+import styles from './ResultsGrid.module.css'
 
 const ResultsGrid = ({ customers }) => {
-    const [selectedCustomer, setSelectedCustomer] = useState(null);
-    const [showInfo, setShowInfo] = useState(false);
-    const [selectedButtonId, setSelectedButtonId] = useState(null);
-
-    useEffect(() => {
-        customers?.map((item, index) => {
-            if (index == 0) {
-                setSelectedCustomer(item)
-                setShowInfo(true)
-                setSelectedButtonId(item._id)
-            }
-        })
-    }, [customers])
-
-    const handleCustomerSelect = (customer) => {
-        setSelectedCustomer(customer);
-        setShowInfo(true);
+    // Función para truncar el texto
+    const truncateText = (text, maxLength = 28) => {
+        if (text.length <= maxLength) {
+            return text;
+        }
+        const truncatedText = text.substring(0, maxLength);
+        const lastSpaceIndex = truncatedText.lastIndexOf(' ');
+        if (lastSpaceIndex !== -1) {
+            return truncatedText.substring(0, lastSpaceIndex) + '\n' + truncatedText.substring(lastSpaceIndex + 1);
+        }
+        return truncatedText + '\n' + text.substring(maxLength);
     };
-
-    const handleButtonSelect = (buttonId) => {
-        setSelectedButtonId(buttonId);
-    };
-
-    const images = selectedCustomer ? [
-        selectedCustomer.file_01,
-        selectedCustomer.file_02,
-        selectedCustomer.file_03,
-        selectedCustomer.file_04,
-        selectedCustomer.file_05,
-        selectedCustomer.file_06,
-        selectedCustomer.file_07,
-        selectedCustomer.file_08,
-        selectedCustomer.file_09,
-        selectedCustomer.file_10,
-    ] : [];
 
     return (
-        <section className={styles['container-searchs']}>
-            <div className={styles['cointainer-grid']}>
-                <div className={styles['cointainer-clientes']}>
-                    <div>
-                        <h2>Resultados</h2>
-                    </div>
-                    {customers.length > 0 ? (
-                        customers.map((item) => (
-                            <div
-                                className={`${styles['control-button']} ${selectedButtonId === item._id ? styles['selected'] : ''}`}
-                                key={item._id}
-                                onClick={() => {
-                                    handleCustomerSelect(item);
-                                    handleButtonSelect(item._id);
-                                }}
-                            >
-                                <div>
-                                    <button className={styles['button-client']}>
-                                        {item.company_name}
-                                    </button>
+        <div style={{ padding: '0 10px', maxWidth: '1200px', margin: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Grid container spacing={2} justifyContent="center" marginTop='7rem' marginBottom='7rem'>
+                {customers.map((customer) => (
+                    <Grid item xs={13} sm={10} md={10} key={customer._id}>
+                        <Card style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)', display: 'flex', flexDirection: 'column', height: '100%', borderRadius: '15px' }}>
+                            <CardContent style={{ display: 'flex', alignItems: 'flex-start' }} className='cards-clients' >
+                                <div style={{  maxWidth: '220px', marginRight: '1rem' }}>
+                                    <img src={`http://api.directorioturismo.com/api/customer/image/${customer.file_01}`} alt="Customer"
+                                        className= {styles["customer-image-small"]}
+                                    />
                                 </div>
-                                <div>
-                                    <span className="material-symbols-outlined">groups</span>
+                                <div style={{ flex: 1 }} >
+                                    <Typography variant="body1" gutterBottom className={styles['description-client']}>{customer.description}</Typography>
+                                    <CardContent className={styles['informative-clients-contact']}>
+                                        <div>
+                                            <Typography variant="body2" color="textSecondary">Teléfono: {truncateText(customer.phone_number)}</Typography>
+                                        </div>
+                                        <div>
+                                            <Typography variant="body2" color="textSecondary">Página Web: {truncateText(customer.link)}</Typography>
+                                        </div>
+                                        <div>
+                                            <Typography variant="body2" color="textSecondary">e-mail: {truncateText(customer.email)}</Typography>
+                                        </div>
+                                        <div>
+                                            <Typography variant="body2" color="textSecondary">Dirección: {truncateText(customer.how_to_get)}</Typography>
+                                        </div>
+                                    </CardContent>
                                 </div>
-                            </div>
-                        ))
-                    ) : (
-                        <h4>No se encontraron clientes en esta categoría</h4>
-                    )}
-                </div>
-
-                {showInfo && (
-                    <div className={styles['cointainer-info']}>
-                        {selectedCustomer && (
-                            <h2>{selectedCustomer.company_name}</h2>
-                        )}
-
-                        <div>
-                            <Slider images={images} />
-                        </div>
-                        {selectedCustomer && (
-                            <div>
-                                <p>{selectedCustomer.description}</p>
-                                {selectedCustomer.link && selectedCustomer.link.length > 1 && (
-                                    <p><span>Página Web:</span> {selectedCustomer.link}</p>
-                                )}                           
-                                <p><span>Teléfonos:</span> {selectedCustomer.phone_number}</p>
-                                <div className={styles['buttons-contact']}>
-                                    <div className={styles['text-buttons']}>
-                                        <p><span>e-mail: </span>{selectedCustomer.email}</p>
-                                        <p>{selectedCustomer.address}</p>
-                                    </div>
-
-                                    <div className={styles['button-responsive']}>
-                                        {selectedCustomer.link && selectedCustomer.link.length > 1 && (
-                                            <Link href={`http://${selectedCustomer.link}`} target='_blank' rel="noopener noreferrer">
-                                                <img src='/Logowww.svg' alt="www" className={styles['www-logo']} />
-                                            </Link>
-                                        )}
-
-                                        {selectedCustomer.phone_number && selectedCustomer.phone_number.length > 1 && (
-                                            <Link href={`https://api.whatsapp.com/send?phone=${selectedCustomer.phone_number}`} target='_blank'>
-                                                <img src='/Logowsss.svg' alt="wpp" className={styles['wpp-logo']} />
-                                            </Link>
-                                        )}
-                                    </div>
+                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                                    <Image src={Wsp} alt="WhatsApp" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                    <Image src={Facebk} alt="Facebook" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                    <Image src={Insta} alt="Instagram" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                    <Image src={Www} alt="Website" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
                                 </div>
-                            </div>
-                        )}
-                    </div>
-                )}
-            </div>
-        </section>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                ))}
+            </Grid>
+        </div>
     );
 };
 

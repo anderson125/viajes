@@ -1,0 +1,31 @@
+.buttons-list-menu {
+  margin-top: 25px;
+  margin-bottom: -25px;
+  background-color: #0d3878;
+  border-radius: 14px;
+  color: white;
+  font-size: 7px;
+  font-weight: bold;
+  width: 105px;
+}
+
+.list-button {
+  width: 105px;
+  text-transform: capitalize;
+  font-size: 8px;
+  text-align: right;
+}
+
+@media (min-width: 600px) {
+  .buttons-list-menu {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-width: 180px;
+  }
+
+  .list-button {
+    min-width: 170px;
+    padding-top: 8px;
+    font-size: 14px;
+  }
+}

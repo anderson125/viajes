@@ -5,7 +5,6 @@ import { Layout } from "@/components/layouts/Layout";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ButtonCards from "@/components/cardsbuttons/ButtonCards";
-import FooterMenu from "@/components/footer/Footer";
 
 export const SearchesPage = () => {
   const router = useRouter();
@@ -14,11 +13,12 @@ export const SearchesPage = () => {
 
   const [customers, setCustomers] = useState([]);
   const [matches, setMatches] = useState([]);
+  const [customersCategories, setCustomersCategories ] = useState([]);
 
   const handleCategorySelect = (categoryId) => {
     if (categoryId) {
       const filteredCustomers = customers.filter((customer) => customer.category_id === categoryId);
-      setMatches(filteredCustomers);
+      setCustomersCategories(filteredCustomers);
     } else {
       setMatches(customers);
     }
@@ -28,12 +28,12 @@ export const SearchesPage = () => {
     if (initialId !== "default") {
       axios.get(`https://api.directorioturismo.com/api/customer/search-customer/?muni=${initialId}`)
         .then((response) => {
+          setCustomersCategories([])
           setCustomers(response.data.articles);
           setMatches(response.data.articles);
         })
         .catch((error) => {
-          setCustomers([]);
-          setMatches([]);
+          router.push('/404')
         });
     }
   }, [initialId]);
@@ -42,8 +42,7 @@ export const SearchesPage = () => {
     <Layout title="Busqueda">
       <HeaderSearchs />
       <ButtonCards onCategoryChange={handleCategorySelect} />
-      <ResultsGrid customers={matches} />
-
+      <ResultsGrid customers={customersCategories} />
     </Layout>
   )
 }
