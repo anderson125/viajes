@@ -150,7 +150,7 @@ body {
   justify-content: space-around;
 }
 
-.list-button {
+.MuiMenuItem-root {
   width: 120px;
   text-transform: capitalize;
   font-size: 8px;
@@ -164,7 +164,7 @@ body {
     min-width: 200px;
   }
 
-  .list-button {
+  .MuiMenuItem-root {
     min-width: 190px;
     padding-top: 8px;
     font-size: 14px;
