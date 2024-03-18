@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, CardContent, Typography } from '@mui/material';
+import { Grid, Card, CardContent, Typography, IconButton } from '@mui/material';
 import Wsp from '../../public/WSP.png';
 import Facebk from '../../public/Facebook.png';
 import Insta from '../../public/Instagram.png';
@@ -7,6 +7,7 @@ import Www from '../../public/www.png';
 import Image from 'next/image';
 
 import styles from './ResultsGrid.module.css'
+import Link from 'next/link';
 
 const ResultsGrid = ({ customers }) => {
     // Función para truncar el texto
@@ -29,9 +30,9 @@ const ResultsGrid = ({ customers }) => {
                     <Grid item xs={13} sm={10} md={10} key={customer._id}>
                         <Card style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)', display: 'flex', flexDirection: 'column', height: '100%', borderRadius: '15px' }}>
                             <CardContent style={{ display: 'flex', alignItems: 'flex-start' }} className='cards-clients' >
-                                <div style={{  maxWidth: '220px', marginRight: '1rem' }}>
+                                <div style={{ maxWidth: '220px', marginRight: '1rem' }}>
                                     <img src={`http://api.directorioturismo.com/api/customer/image/${customer.file_01}`} alt="Customer"
-                                        className= {styles["customer-image-small"]}
+                                        className={styles["customer-image-small"]}
                                     />
                                 </div>
                                 <div style={{ flex: 1 }} >
@@ -52,10 +53,26 @@ const ResultsGrid = ({ customers }) => {
                                     </CardContent>
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                                    <Image src={Wsp} alt="WhatsApp" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
-                                    <Image src={Facebk} alt="Facebook" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
-                                    <Image src={Insta} alt="Instagram" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
-                                    <Image src={Www} alt="Website" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                    {customer.whatsapp || customer.phone_number &&
+                                        <Link href={`https://wa.me/+57${customer.phone_number}` || '/'} passHref target="_blank">
+                                                <Image src={Wsp} alt="WhatsApp" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                        </Link>
+                                    }
+                                    {customer.facebook &&
+                                        <Link href={customer.facebook || '/'}  passHref target='_blank'>
+                                                <Image src={Facebk} alt="Facebook" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                        </Link>
+                                    }
+                                    {customer.instagram &&
+                                        <Link href={customer.instagram || '/'} passHref target="_blank">
+                                                <Image src={Insta} alt="Instagram" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                        </Link>
+                                    }
+                                    {customer.link &&
+                                        <Link href={customer.link || '/'} passHref target="_blank">
+                                                <Image src={Www} alt="Website" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                        </Link>
+                                    }
                                 </div>
                             </CardContent>
                         </Card>

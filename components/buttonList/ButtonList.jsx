@@ -6,18 +6,24 @@ import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Grid from '@mui/material/Grid';
 
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
+
 
 const CategoryButton = ({ name, categories, onCategoryChange }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedCategoryText, setSelectedCategoryText] = useState(name);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
+        setMenuOpen(true)
     };
 
     const handleMenuClose = () => {
         setAnchorEl(null);
+        setMenuOpen(false)
     };
 
     const handleSelect = (categoryId, categoryText) => {
@@ -35,6 +41,7 @@ const CategoryButton = ({ name, categories, onCategoryChange }) => {
                 onMouseEnter={handleMenuOpen}
             >
                 {selectedCategoryText}
+                {menuOpen ? <HorizontalRuleIcon /> : <KeyboardArrowDownIcon />}
             </Button>
             <Popover
                 id="basic-menu"

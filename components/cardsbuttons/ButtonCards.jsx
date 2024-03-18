@@ -32,7 +32,7 @@ const ButtonCards = ({ onCategoryChange }) => {
     }, []);
   
     return (
-      <Grid container justifyContent="center" className="buttons-list-menu" spacing={2}>
+      <Grid container justifyContent="center" className="buttons-list-menu" spacing={1}>
         <CategoryButton name="Hospedaje" categories={mainCategories} onCategoryChange={onCategoryChange} />
         <CategoryButton name="Servicios turísticos" categories={mainCategoriesServices} onCategoryChange={onCategoryChange} />
         <CategoryButton name="Otros servicios" categories={mainCategoriesOthers} onCategoryChange={onCategoryChange} />
