@@ -15,7 +15,7 @@
 }
 
 .description-client {
-  font-size: 17px;
+  font-size: 15px;
   padding: 6px 8px;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .informative-clients-contact p {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 @media (width < 400px) {
