@@ -152,6 +152,7 @@ body {
   margin-top: 25px;
   margin-bottom: -25px;
   background-color: #0d3878;
+  text-transform: capitalize;
   text-align: center;
   border-radius: 14px;
   color: white;
@@ -202,7 +203,7 @@ ul:hover ul.dropdown {
 @media screen and (max-width: 600px) {
   .dropdown-container {
     width: 120px;
-    font-size: 10px; 
+    font-size: 9px; 
     margin: 0 -6px;
     margin-top: 25px;
     margin-bottom: -25px;
