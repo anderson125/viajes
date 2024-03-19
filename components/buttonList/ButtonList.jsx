@@ -1,77 +1,48 @@
-import styles from './buttonList.module.css'
 import React, { useState } from 'react';
-import Button from '@mui/material/Button';
-import Popover from '@mui/material/Popover';
-import Typography from '@mui/material/Typography';
-import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/Grid';
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 
-
 const CategoryButton = ({ name, categories, onCategoryChange }) => {
-    const [anchorEl, setAnchorEl] = useState(null);
-    const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedCategoryText, setSelectedCategoryText] = useState(name);
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
-    const handleMenuOpen = (event) => {
-        setAnchorEl(event.currentTarget);
-        setMenuOpen(true)
+    const handleMouseEnter = () => {
+        setIsHovered(true);
     };
 
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-        setMenuOpen(false)
+    const handleMouseLeave = () => {
+        setIsHovered(false);
     };
 
     const handleSelect = (categoryId, categoryText) => {
-        setSelectedCategory(categoryId);
-        setSelectedCategoryText(categoryText);
         onCategoryChange(categoryId);
-        handleMenuClose();
+        setSelectedCategoryText(categoryText)
     };
 
     return (
-        <Grid item>
-            <Button
-                aria-controls={anchorEl ? 'basic-menu' : undefined}
-                aria-haspopup="true"
-                onMouseEnter={handleMenuOpen}
+        <ul className='dropdown-section'>
+            <li
+                className='dropdown-container'
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
-                {selectedCategoryText}
-                {menuOpen ? <HorizontalRuleIcon /> : <KeyboardArrowDownIcon />}
-            </Button>
-            <Popover
-                id="basic-menu"
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-                onClose={handleMenuClose}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'center',
-                }}
-                transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'center',
-                }}
-            >
-                <Typography
-                    onMouseLeave={handleMenuClose}
-                >
+                <div className='dropdown-section-text'>
+                    <p>{selectedCategoryText} </p>
+                    {isHovered ? <HorizontalRuleIcon /> : <KeyboardArrowDownIcon />}
+                </div>
+                <ul className='dropdown'>
                     {categories.map((item) => (
-                        <MenuItem
-                            className={'list-button'}
+                        <li
                             key={item._id}
                             onClick={() => handleSelect(item._id, item.categorie)}
                         >
                             {item.categorie}
-                        </MenuItem>
+                        </li>
                     ))}
-                </Typography>
-            </Popover>
-        </Grid >
+                </ul>
+            </li>
+        </ul>
     );
 };
 

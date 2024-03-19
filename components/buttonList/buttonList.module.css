@@ -1,4 +1,4 @@
-.buttons-list-menu {
+/* .buttons-list-menu button {
   margin-top: 25px;
   margin-bottom: -25px;
   background-color: #0d3878;
@@ -6,26 +6,71 @@
   color: white;
   font-size: 7px;
   font-weight: bold;
-  width: 105px;
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.list-button {
-  width: 105px;
+.MuiMenuItem-root {
+  width: 120px;
   text-transform: capitalize;
   font-size: 8px;
   text-align: right;
 }
 
 @media (min-width: 600px) {
-  .buttons-list-menu {
+  .buttons-list-menu button {
     font-size: 12px;
     padding: 6px 12px;
-    min-width: 180px;
+    min-width: 200px;
   }
 
-  .list-button {
-    min-width: 170px;
+  .MuiMenuItem-root {
+    min-width: 190px;
     padding-top: 8px;
     font-size: 14px;
   }
+} */
+
+.dropdown-section ul {
+  list-style: none;
+  background: #fff;
+}
+
+.dropdown-section li {
+  list-style: none;
+}
+
+.dropdown-container {
+  margin-top: 25px;
+  margin-bottom: -25px;
+  background-color: #0d3878;
+  text-align: center;
+  border-radius: 14px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 120px;
+}
+
+.dropdown li {
+  display: block;
+}
+
+.dropdown {
+  width: 100%;
+  background: #22438c;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+.dropdown-container:hover {
+  background: #112c66;
+  cursor: pointer;
+}
+
+.dropdown:hover {
+  display: block;
 }
