@@ -38,39 +38,47 @@ const ResultsGrid = ({ customers }) => {
                                 <div style={{ flex: 1 }} >
                                     <Typography variant="body1" gutterBottom className={styles['description-client']}>{customer.description}</Typography>
                                     <CardContent className={styles['informative-clients-contact']}>
-                                        <div>
-                                            <Typography variant="body2" color="textSecondary">Teléfono: {truncateText(customer.phone_number)}</Typography>
-                                        </div>
-                                        <div>
-                                            <Typography variant="body2" color="textSecondary">Página Web: {truncateText(customer.link)}</Typography>
-                                        </div>
-                                        <div>
-                                            <Typography variant="body2" color="textSecondary">e-mail: {truncateText(customer.email)}</Typography>
-                                        </div>
-                                        <div>
-                                            <Typography variant="body2" color="textSecondary">Dirección: {truncateText(customer.how_to_get)}</Typography>
-                                        </div>
+                                        {customer.phone_number && customer.phone_number.trim() !== '' && customer.phone_number !== 'null' && (
+                                            <div>
+                                                <Typography variant="body2" color="textSecondary">Teléfono: {truncateText(customer.phone_number)}</Typography>
+                                            </div>
+                                        )}
+                                        {customer.link && customer.link.trim() !== '' && customer.link !== 'null' &&  (
+                                            <div>
+                                                <Typography variant="body2" color="textSecondary">Página Web: {truncateText(customer.link)}</Typography>
+                                            </div>
+                                        )}
+                                        {customer.email && customer.email.trim() !== '' && customer.email !== 'null' && (
+                                            <div>
+                                                <Typography variant="body2" color="textSecondary">e-mail: {truncateText(customer.email)}</Typography>
+                                            </div>
+                                        )}
+                                        {customer.how_to_get && customer.how_to_get !== 'null' &&customer.how_to_get.trim() !== '' && (
+                                            <div>
+                                                <Typography variant="body2" color="textSecondary">Dirección: {truncateText(customer.how_to_get)}</Typography>
+                                            </div>
+                                        )}
                                     </CardContent>
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
                                     {customer.whatsapp || customer.phone_number &&
                                         <Link href={`https://wa.me/+57${customer.phone_number}` || '/'} passHref target="_blank">
-                                                <Image src={Wsp} alt="WhatsApp" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                            <Image src={Wsp} alt="WhatsApp" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
                                         </Link>
                                     }
                                     {customer.facebook &&
-                                        <Link href={customer.facebook || '/'}  passHref target='_blank'>
-                                                <Image src={Facebk} alt="Facebook" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                        <Link href={customer.facebook || '/'} passHref target='_blank'>
+                                            <Image src={Facebk} alt="Facebook" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
                                         </Link>
                                     }
                                     {customer.instagram &&
                                         <Link href={customer.instagram || '/'} passHref target="_blank">
-                                                <Image src={Insta} alt="Instagram" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                            <Image src={Insta} alt="Instagram" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
                                         </Link>
                                     }
                                     {customer.link &&
                                         <Link href={customer.link || '/'} passHref target="_blank">
-                                                <Image src={Www} alt="Website" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
+                                            <Image src={Www} alt="Website" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
                                         </Link>
                                     }
                                 </div>
