@@ -61,7 +61,7 @@ const ResultsGrid = ({ customers }) => {
                                     </CardContent>
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                                    {customer.whatsapp || customer.phone_number &&
+                                    {customer.phone_number &&
                                         <Link href={`https://wa.me/+57${customer.phone_number}` || '/'} passHref target="_blank">
                                             <Image src={Wsp} alt="WhatsApp" style={{ width: '20px', height: '20px', marginBottom: '0.9rem' }} />
                                         </Link>
