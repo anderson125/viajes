@@ -40,22 +40,22 @@ const ResultsGrid = ({ customers }) => {
                                     <CardContent className={styles['informative-clients-contact']}>
                                         {customer.phone_number && customer.phone_number.trim() !== '' && customer.phone_number !== 'null' && (
                                             <div>
-                                                <Typography variant="body2" color="textSecondary">Teléfono: {truncateText(customer.phone_number)}</Typography>
+                                                <Typography variant="body2" color="textSecondary">Teléfono: {customer.phone_number}</Typography>
                                             </div>
                                         )}
                                         {customer.link && customer.link.trim() !== '' && customer.link !== 'null' &&  (
                                             <div>
-                                                <Typography variant="body2" color="textSecondary">Página Web: {truncateText(customer.link)}</Typography>
+                                                <Typography variant="body2" color="textSecondary">Página Web: {customer.link}</Typography>
                                             </div>
                                         )}
                                         {customer.email && customer.email.trim() !== '' && customer.email !== 'null' && (
                                             <div>
-                                                <Typography variant="body2" color="textSecondary">e-mail: {truncateText(customer.email)}</Typography>
+                                                <Typography variant="body2" color="textSecondary">e-mail: {customer.email}</Typography>
                                             </div>
                                         )}
-                                        {customer.how_to_get && customer.how_to_get !== 'null' &&customer.how_to_get.trim() !== '' && (
+                                        {customer.address && customer.address !== 'null' &&customer.address.trim() !== '' && (
                                             <div>
-                                                <Typography variant="body2" color="textSecondary">Dirección: {truncateText(customer.how_to_get)}</Typography>
+                                                <Typography variant="body2" color="textSecondary">Dirección: {customer.address}</Typography>
                                             </div>
                                         )}
                                     </CardContent>

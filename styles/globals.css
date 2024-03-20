@@ -216,4 +216,8 @@ ul:hover ul.dropdown {
   .dropdown {
     width: 120px;
   }
+
+  .dropdown li {
+    padding: 5px 0;
+  }
 }
