@@ -30,7 +30,7 @@
   line-height: 1.1;
 }
 
-@media (width < 400px) {
+@media (width < 448px) {
   .customer-image-small {
     min-height: 110px;
     max-height: 110px;
