@@ -42,7 +42,6 @@ export const SearchesPage = () => {
                     setShowImageT(true)
                 })
                 .catch((error) => {
-                    router.push('/404')
                 });
         }
     }, [initialId]);
