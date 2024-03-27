@@ -35,15 +35,17 @@ export const SearchesPage = () => {
 
     useEffect(() => {
         setShowImage(false)
+        setShowImageT(true)
         if (initialId !== "default") {
             axios.get(`https://api.directorioturismo.com/api/customer/search-customer/?muni=${initialId}`)
                 .then((response) => {
                     setCustomersCategories([])
                     setCustomers(response.data.articles);
                     setMatches(response.data.articles);
-                    setShowImageT(true)
+                    
                 })
                 .catch((error) => {
+                    setCustomersCategories([])
                 });
         }
     }, [initialId]);
