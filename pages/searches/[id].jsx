@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ButtonCards from "@/components/cardsbuttons/ButtonCards";
 
-import imgInformativa from '../../assets/resultgrid/Señalando.png';
-import imgLupa from '../../assets/resultgrid/Lupa.png'; // Importa la nueva imagen
+import imgInformativa from '../../assets/resultgrid/Señalando.svg';
+import imgLupa from '../../assets/resultgrid/Lupa.svg'; // Importa la nueva imagen
 import Image from "next/image";
 
 export const SearchesPage = () => {
@@ -18,6 +18,7 @@ export const SearchesPage = () => {
     const [customers, setCustomers] = useState([]);
     const [matches, setMatches] = useState([]);
     const [customersCategories, setCustomersCategories] = useState([]);
+
     const [showImage, setShowImage] = useState(false);
     const [showImageT, setShowImageT] = useState(false);
 
@@ -33,6 +34,7 @@ export const SearchesPage = () => {
     };
 
     useEffect(() => {
+        setShowImage(false)
         if (initialId !== "default") {
             axios.get(`https://api.directorioturismo.com/api/customer/search-customer/?muni=${initialId}`)
                 .then((response) => {
@@ -57,7 +59,7 @@ export const SearchesPage = () => {
                 </div>
             )}
 
-            {(showImage && customersCategories.length === 0) && ( // Asegura que la imagen de la lupa solo se muestre si showImage es verdadero y customersCategories está vacío
+            {showImage && ( // Asegura que la imagen de la lupa solo se muestre si showImage es verdadero y customersCategories está vacío
                 <div className="image-resultgrid-lupa">
                     <Image src={imgLupa} alt="Lupa Image" />
                 </div>
