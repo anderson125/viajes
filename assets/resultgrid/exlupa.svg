@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 634" style="enable-background:new 0 0 960 634;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#908983;}
+	.st1{fill:#AF3D3D;}
+	.st2{fill:#272422;}
+	.st3{fill:#4C4642;}
+	.st4{fill:#EB5151;}
+	.st5{fill:#EAB77D;}
+	.st6{fill:#5093B1;}
+	.st7{fill:#78B7CF;}
+	.st8{fill:#2D788F;}
+	.st9{fill:#DBC2BC;}
+	.st10{fill:#ECD4CE;}
+	.st11{fill:#EBD9D6;}
+	.st12{fill:#E7A2BC;}
+	.st13{fill:#D890B1;}
+	.st14{fill:#FF5A6C;}
+	.st15{fill:#D54C60;}
+	.st16{fill:#122D41;}
+	.st17{fill:#C39565;}
+	.st18{fill:#83679B;}
+	.st19{fill:#635074;}
+	.st20{fill:#C8C1A7;}
+	.st21{fill:#8F6450;}
+	.st22{fill:#E7E0C6;}
+	.st23{fill:#FFFFFF;}
+	.st24{fill:#982B2B;}
+	.st25{fill:#D44F4F;}
+	.st26{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+	.st27{fill:#998675;}
+	.st28{fill:#42210B;}
+	.st29{clip-path:url(#SVGID_4_);}
+	.st30{fill:#E2E2E2;}
+	.st31{opacity:0.3;fill:#F6FEFF;stroke:#000000;stroke-width:7.9795;stroke-miterlimit:10;}
+	.st32{fill:#161D21;}
+	.st33{fill:#F5F5F5;}
+	.st34{fill:#ECECEC;}
+	.st35{fill:#E1E1E1;}
+	.st36{fill:#FF735D;}
+	.st37{fill:#1A2E35;}
+	.st38{fill:#FAFAFA;}
+	.st39{opacity:0.2;}
+	.st40{opacity:0.6;}
+	.st41{fill:#FFBF9D;}
+	.st42{fill:#375A64;}
+	.st43{fill:#FF9A6C;}
+	.st44{opacity:0.3;}
+	.st45{fill:#D3DDF7;}
+	.st46{fill:#7584F1;}
+	.st47{fill:none;stroke:#000000;stroke-width:3.8255;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st48{fill:none;stroke:#000000;stroke-width:3.8255;stroke-miterlimit:10;}
+	.st49{font-family:'Lexend-Light';}
+	.st50{font-size:69.3176px;}
+</style>
+<g id="Capa_1">
+</g>
+<g id="Capa_2">
+	<g>
+		<path class="st45" d="M918.13,630.57H43.68c-21.46,0-38.86-17.4-38.86-38.86V42c0-21.46,17.4-38.86,38.86-38.86h874.45
+			c21.46,0,38.86,17.4,38.86,38.86v549.72C956.99,613.18,939.59,630.57,918.13,630.57z"/>
+		<path class="st46" d="M918.13,3.14H43.68c-21.46,0-38.86,17.4-38.86,38.86v38.19h952.16V41.99
+			C956.99,20.53,939.59,3.14,918.13,3.14z"/>
+		<g>
+			<circle class="st47" cx="799.05" cy="42.89" r="13.76"/>
+			<circle class="st47" cx="850.5" cy="42.89" r="13.76"/>
+			<circle class="st47" cx="901.95" cy="42.89" r="13.76"/>
+		</g>
+		<g>
+			<g>
+				<path class="st46" d="M395.25,195.44c-10.85,0-21.36-7.25-29.69-14.2l-10.15-8.47c-6.28-5.24-13.73-8.04-21.37-8.04H247.5
+					c-7.85,0-14.22,6.37-14.22,14.22v16.49v302.3c0,10.54,8.55,19.09,19.09,19.09h436.9c10.54,0,19.09-8.55,19.09-19.09V214.53
+					c0-10.54-8.55-19.09-19.09-19.09H395.25z"/>
+				<path class="st48" d="M673.56,256.6H549.97c-5.51,0-9.98-4.47-9.98-9.98l0,0c0-5.51,4.47-9.98,9.98-9.98h123.59
+					c5.51,0,9.98,4.47,9.98,9.98l0,0C683.54,252.13,679.07,256.6,673.56,256.6z"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 363.8993 389.8115)" class="st49 st50">No Data</text>
+</g>
+</svg>

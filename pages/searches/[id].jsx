@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ButtonCards from "@/components/cardsbuttons/ButtonCards";
 
-import imgInformativa from '../../assets/resultgrid/Señalando.svg';
-import imgLupa from '../../assets/resultgrid/Lupa.svg'; // Importa la nueva imagen
+import imgInformativa from '../../assets/resultgrid/exgordita.svg';
+import imgLupa from '../../assets/resultgrid/exlupa.svg'; // Importa la nueva imagen
 import Image from "next/image";
 
 export const SearchesPage = () => {
