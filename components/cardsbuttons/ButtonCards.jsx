@@ -14,9 +14,9 @@ const ButtonCards = ({ onCategoryChange }) => {
       axios
         .get('https://api.directorioturismo.com/api/category/get-categories')
         .then((response) => {
-          const main = ['hoteles', 'ecohoteles', 'camping', 'glamping', 'alquiler de fincas', 'cabañas'];
+          const main = ['hoteles', 'ecohoteles', 'camping', 'glamping y cabañas', 'alquiler de fincas', 'alquiler de casas y apartamentos'];
           const mainServices = ['agencias de viajes', 'operadores turísticos', 'guías turísticos','centros recreativos', 'parques temáticos', 'reservas naturales', 'museos'];
-          const mainOyhers = ['restaurantes', 'artesanías', 'transporte']; 
+          const mainOyhers = ['gastronomía', 'artesanías', 'transporte']; 
           const allCategories = response.data.categories;
           const mainCats = allCategories.filter((item) => main.includes(item.categorie.toLowerCase()));
           const mainCatsServices = allCategories.filter((item) => mainServices.includes(item.categorie.toLowerCase()));
